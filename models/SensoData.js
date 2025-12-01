@@ -10,5 +10,8 @@ const sensorSchema = new mongoose.Schema({
   timestamp: {          // when the reading was taken
     type: Date,
     default: Date.now
-  }
+  },
+  status: Bool,
 });
+
+module.exports = ("sensorDaya", sensorSchema);
