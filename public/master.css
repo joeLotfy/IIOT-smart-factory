@@ -1,27 +1,19 @@
-/* ================================================= */
-/* 1. BODY & BACKGROUND (الخلفية - الحركة والإضاءة) */
-/* ================================================= */
+
 body {
-    /* خط تقني حديث وواضح */
-    font-family: 'Space Mono', 'Consolas', monospace; 
-    
-    background-color: #040910; 
-    background-image: linear-gradient(135deg, #040910 0%, #0c1729 100%);
-    
+    font-family: 'Space Mono', 'Consolas', monospace;    
+   background-color: #040910; 
+    background-image: linear-gradient(135deg, #040910 0%, #0c1729 100%); 
     margin: 0;
     padding: 0;
     direction: rtl;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    
-    /* حركة نبض بسيطة على خلفية الجسم (لإضافة الدلع) */
+    min-height: 100vh; 
     animation: backgroundGlow 15s infinite alternate; 
 }
 
-/* تعريف الحركة: تغيير لون الظل الخفيف ببطء */
+
 @keyframes backgroundGlow {
     0% {
         box-shadow: inset 0 0 50px rgba(0, 255, 204, 0.1);
@@ -32,35 +24,24 @@ body {
 }
 
 
-/* ================================================= */
-/* 2. LOGIN CONTAINER (حاوية تسجيل الدخول - الحركة والتفاعل) */
-/* ================================================= */
+
 .login-container {
-    background: rgba(18, 26, 40, 0.8); /* زيادة الشفافية */
+    background: rgba(18, 26, 40, 0.8); 
     backdrop-filter: blur(10px) saturate(1.2); 
-    -webkit-backdrop-filter: blur(10px) saturate(1.2);
-    
+    -webkit-backdrop-filter: blur(10px) saturate(1.2);  
     width: 380px;
     padding: 45px 35px;
-    
     border-radius: 15px; 
-    
-    /* حدود متوهجة */
     border: 1px solid rgba(0, 255, 204, 0.3); 
-    
-    /* ظل توهج قوي */
-    box-shadow: 0 0 60px rgba(0, 199, 229, 0.8); 
-    
+    box-shadow: 0 0 60px rgba(0, 199, 229, 0.8);  
     text-align: center;
-    color: #F0F8FF;
-    
-    /* حركة دخول بسيطة (لإضافة دلع عند تحميل الصفحة) */
+    color: #F0F8FF;   
     transform: scale(0.95);
     opacity: 0;
     animation: fadeIn 0.8s ease-out 0.2s forwards; 
 }
 
-/* حركة ظهور الحاوية عند تحميل الصفحة */
+
 @keyframes fadeIn {
     to {
         transform: scale(1);
@@ -68,9 +49,7 @@ body {
     }
 }
 
-/* ================================================= */
-/* 3. HEADERS (العناوين) */
-/* ================================================= */
+
 h2 { 
     margin-bottom: 30px; 
     color: #00FFCC; 
@@ -82,9 +61,7 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* ================================================= */
-/* 4. FORM ELEMENTS (عناصر النموذج) */
-/* ================================================= */
+
 label { 
     display: block; 
     margin-bottom: 8px; 
@@ -96,30 +73,26 @@ label {
 input { 
     width: 100%; 
     padding: 15px; 
-    margin-bottom: 25px;
-    
+    margin-bottom: 25px; 
     border: none; 
     border-bottom: 2px solid #4a5a6a; 
-    background-color: rgba(255, 255, 255, 0.08); /* خلفية أكثر وضوحاً */
+    background-color: rgba(255, 255, 255, 0.08); 
     color: #FFFFFF;
-    
     border-radius: 6px; 
     box-sizing: border-box; 
     transition: all 0.3s ease;
 }
 
-/* تأثير التركيز (Focus) - أهم خاصية احترافية */
+
 input:focus {
     border-bottom: 2px solid #FF55AA; 
     background-color: rgba(255, 255, 255, 0.15); 
     outline: none;
     box-shadow: 0 0 10px rgba(255, 85, 170, 0.8); 
-    transform: scale(1.01); /* حركة بسيطة عند التركيز (دلع) */
+    transform: scale(1.01); 
 }
 
-/* ================================================= */
-/* 5. BUTTON (الزر - الحركة والتوهج المزدوج) */
-/* ================================================= */
+
 button { 
     width: 100%; 
     padding: 18px; 
@@ -131,7 +104,6 @@ button {
     font-size: 1.2em; 
     font-weight: 700;
     margin-top: 30px;
-    
     box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* منحنى حركة أكثر سلاسة */
 }
@@ -143,9 +115,7 @@ button:hover {
     transform: scale(1.05) rotateZ(-1deg); /* تكبير ودوران خفيف (دلل الزر) */
 }
 
-/* ================================================= */
-/* 6. MESSAGES & UTILITIES */
-/* ================================================= */
+
 #message { 
     color: #FF55AA; 
     margin-top: 20px; 

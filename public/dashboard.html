@@ -11,20 +11,41 @@
         <a href="index.html">تسجيل الخروج</a>
 
     </header>
+   <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<body>
+    <header>
+        <button id="lang-toggle" class="lang-button">EN / عربي</button> 
+        
+        <h1 data-key="dashboardTitle"> لوحة تحكم المصنع الذكي</h1>  
+        <a href="index.html" data-key="logoutLink">تسجيل الخروج</a>
+    </header>
+    
     <div class="dashboard">
-        <h2>بيانات المستشعرات الأخيرة</h2>
+        <h2 data-key="sensorDataTitle">بيانات المستشعرات الأخيرة</h2>
         <table id="sensorTable">
             <thead>
                 <tr>
-                    <th>نوع المستشعر</th>
-                    <th>القيمة</th>
-                    <th>الوقت</th>
-                    <th>الحالة</th>
+                    <th data-key="sensorType">نوع المستشعر</th>
+                    <th data-key="value">القيمة</th>
+                    <th data-key="time">الوقت</th>
+                    <th data-key="status">الحالة</th>
                 </tr>
             </thead>
             <tbody></tbody>
         </table>
-        <button id="refreshBtn">تحديث البيانات</button>
+        <button id="refreshBtn" data-key="refreshBtn">تحديث البيانات</button>
+        
+        <div id="alerts" class="hidden">
+            <p data-key="alertExample">تنبيه: درجة الحرارة عالية! (مثال)</p>
+        </div>
+    </div>
+    <script src="dash.js"></script>
+</body>
+</html>
+    <div class="dashboard">
+       
+        
    
         <div id="alerts" class="hidden">
             <p>تنبيه: درجة الحرارة عالية! (مثال)</p>

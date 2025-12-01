@@ -5,13 +5,17 @@ const mongoose = require('mongoose');
 
 // Define the structure (schema) of your sensor data
 const sensorSchema = new mongoose.Schema({
-  sensorType: String,   // e.g. "temperature", "gas", "humidity"
-  value: Number,        // numeric reading from the sensor
-  timestamp: {          // when the reading was taken
-    type: Date,
-    default: Date.now
-  },
-  status: Bool
+  motor1: String,
+  motor2: String,
+  LDR: String,
+  temp: Number,
+  hum: Number,
+  RFID: String,
+  gas: String,
+  PIR: Number,
+  readingTime: {type: Date, default: Date.now}
 });
 
-module.exports = ("sensorData", sensorSchema);
+
+// EXPORT THE REAL MONGOOSE SensorData MODEL
+module.exports = mongoose.model("SensorsData", sensorSchema);
