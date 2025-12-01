@@ -11,7 +11,7 @@ const sensorSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
-  status: Bool,
+  status: Bool
 });
 
-module.exports = ("sensorDaya", sensorSchema);
+module.exports = ("sensorData", sensorSchema);
