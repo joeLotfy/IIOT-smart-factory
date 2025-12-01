@@ -9,6 +9,8 @@ const getDBStatus = require("./utils/dbStatus.js"); //DataBase status file
 const app = express(); //create an express app
 let dbConnected = false; // store connection status
 
+app.use(express.static("public")); //uses the frontend from /public
+
 app.get("/db-status", (req, res) =>{
   const status = getDBStatus();
   res.json(status);
