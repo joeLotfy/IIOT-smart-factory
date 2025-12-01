@@ -26,8 +26,6 @@ mongoose.connect(process.env.MONGO_URI)
     console.error('Connection ERROR with MongoDB:', err);
     dbConnected = false; // stay false if failed
 });
-
-
   
 
 // Homepage route
